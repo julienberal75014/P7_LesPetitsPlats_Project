@@ -27,25 +27,31 @@
         </nav>
         <div class="filter">
             <div class="btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <button type="button" id="button" class="btn btn-primary" data-bs-toggle="dropdown"
+                    aria-expanded="false" onclick="showBtn(); showInput()">
                     Ingrédients
+                    <img class="arrow" src="./assets/arrow_down.svg" alt="plus">
+                    <input class="ingredients_input input" type="search" placeholder="Rechercher un ingrédient " />
                 </button>
                 <ul class="dropdown-menu blue">
                 </ul>
             </div>
             <div class="btn-group">
-                <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <button type="button" id="button" class="btn btn-success" data-bs-toggle="dropdown"
+                    aria-expanded="false" onclick="showBtn()">
                     Appareils
+                    <img class="arrow" src="./assets/arrow_down.svg" alt="plus">
+                    <input class="appliances_input input" type="search" placeholder="Rechercher un appareil" />
                 </button>
                 <ul class="dropdown-menu green">
                 </ul>
             </div>
             <div class="btn-group">
-                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <button type="button" id="button" class="btn btn-danger" data-bs-toggle="dropdown" aria-expanded="false"
+                    onclick="showBtn()">
                     Ustensiles
+                    <img class="arrow" src="./assets/arrow_down.svg" alt="plus">
+                    <input class="ustensils_input input" type="search" placeholder="Rechercher un ustensile" />
                 </button>
                 <ul class="dropdown-menu red">
                 </ul>
@@ -66,7 +72,6 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src="./data/recipes.js"></script>
-    <script src="./scripts/fetch.js"></script>
     <script src="./scripts/factories/displayRecipes.js"></script>
     <script src="./scripts/factories/displayFilters.js"></script>
     <script src="./scripts/index.js"></script>
