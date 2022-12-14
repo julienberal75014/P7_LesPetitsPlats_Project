@@ -57,6 +57,10 @@ nav {
   top: 10px;
 }
 
+input {
+  display: none;
+}
+
 .filter {
   display: flex;
   justify-content: flex-start;
@@ -68,14 +72,54 @@ nav {
   width: fit-content;
 }
 
+.ingredients_input {
+  background-color: #3282f7;
+  border: none;
+  color: #ffffff;
+}
+
+.appliances_input {
+  background-color: #68d9a4;
+  border: none;
+  color: #ffffff;
+}
+
+.ustensils_input {
+  background-color: #ed6454;
+  border: none;
+  color: #ffffff;
+}
+
+::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
 .btn {
-  padding: 10px;
+  padding: 17px;
+  border-radius: 5px !important;
+}
+
+.arrow {
+  padding-left: 2rem;
+}
+
+.arrow2 {
+  display: none;
 }
 
 .btn-primary,
 .blue {
   background-color: #3282f7;
   border: none;
+}
+
+.dropdown-menu.show {
+  column-fill: initial;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0px 30px;
 }
 
 .blue a:hover {
