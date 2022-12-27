@@ -57,16 +57,8 @@ nav {
   top: 10px;
 }
 
-input {
-  display: none;
-}
-
 .filter {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 20px;
   margin-bottom: 20px;
-  gap: 20px;
   position: relative;
   left: 7%;
   width: fit-content;
@@ -76,18 +68,27 @@ input {
   background-color: #3282f7;
   border: none;
   color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1rem 2rem 1rem 1rem;
 }
 
 .appliances_input {
   background-color: #68d9a4;
   border: none;
   color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1rem 2rem 1rem 1rem;
 }
 
 .ustensils_input {
   background-color: #ed6454;
   border: none;
   color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1rem 2rem 1rem 1rem;
 }
 
 ::placeholder {
@@ -100,7 +101,9 @@ input {
   border-radius: 5px !important;
 }
 
-.arrow {
+.arrow,
+.arrow1,
+.arrow3 {
   padding-left: 2rem;
 }
 
@@ -112,6 +115,7 @@ input {
 .blue {
   background-color: #3282f7;
   border: none;
+  margin-right: 1rem;
 }
 
 .dropdown-menu.show {
@@ -130,6 +134,7 @@ input {
 .green {
   background-color: #68d9a4;
   border: none;
+  margin-right: 1rem;
 }
 
 .btn-success:hover {
@@ -240,4 +245,69 @@ strong {
     flex: 0 0 auto;
     width: 86%;
   }
+}
+
+.input_group1,
+.input_group2,
+.input_group3 {
+  display: none;
+}
+
+.input_group1 img,
+.input_group2 img,
+.input_group3 img {
+  position: absolute;
+  top: 25px;
+  right: 6%;
+}
+
+.btn-blue {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background-color: #3282f7;
+  color: white;
+  padding: 5px 20px 5px 20px;
+}
+
+.btn-blue:hover {
+  background-color: #3282f7;
+  color: white;
+}
+
+.btn-green {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background-color: #68d9a4;
+  color: white;
+  padding: 5px 20px 5px 20px;
+}
+
+.btn-green:hover {
+  background-color: #68d9a4;
+  color: white;
+}
+
+.btn-red {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background-color: #ed6454;
+  color: white;
+  padding: 5px 20px 5px 20px;
+}
+
+.btn-red:hover {
+  background-color: #ed6454;
+  color: white;
+}
+
+.selected-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }

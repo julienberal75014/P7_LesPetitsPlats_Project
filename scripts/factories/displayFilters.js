@@ -31,6 +31,7 @@ async function displayFilters(filtersList) {
     })
     displayIngredients = displayIngredients.join('')
     filterBlue.innerHTML = displayIngredients
+    selectIngredients()
 
     let displayAppareils = appliancesArray.map((appareil) => {
         return `<li><a class="dropdown-item" href="#">${appareil}</a></li>`
@@ -38,6 +39,7 @@ async function displayFilters(filtersList) {
     )
     displayAppareils = displayAppareils.join('')
     filterGreen.innerHTML = displayAppareils
+    selectAppareils()
 
     let displayUstensiles = ustensilsArray.map((ustensil) => {
         return `<li><a class="dropdown-item" href="#">${ustensil}</a></li>`
@@ -45,30 +47,109 @@ async function displayFilters(filtersList) {
     )
     displayUstensiles = displayUstensiles.join('')
     filterRed.innerHTML = displayUstensiles
+    selectUstensils()
 
 }
 
-const btn = document.querySelector('#button')
-const arrow = document.querySelector('.arrow')
-
-function showBtn() {
-
-    if (btn.classList.contains('show')) {
-        arrow.setAttribute('src', 'assets/arrow_up.svg')
-    } else {
-        arrow.setAttribute('src', 'assets/arrow_down.svg')
-    }
-}
 
 function showInput() {
-    const input = document.querySelector('.input')
+    const first = document.querySelector('.first_button')
+    const second = document.querySelector('.second_button')
+    const third = document.querySelector('.third_button')
 
-    if (input.classList.active) {
-        input.style.display = 'block'
-    } else {
-        input.style.display = 'none'
-    }
+    first.addEventListener('click', () => {
+        const btn_primary = document.querySelector('.btn-primary')
+        const input_group1 = document.querySelector('.input_group1')
+        const ingredientButton = document.querySelector('.ingredients_input')
+        if (btn_primary.style.display === 'none') {
+            btn_primary.style.display = 'block'
+            input_group1.style.display = 'none'
+        } else {
+            btn_primary.style.display = 'none'
+            input_group1.style.display = 'flex'
+            ingredientButton.select()
+        }
+    })
+
+    second.addEventListener('click', () => {
+        const btn_success = document.querySelector('.btn-success')
+        const input_group2 = document.querySelector('.input_group2')
+        const appliance = document.querySelector('.appliances_input')
+        if (btn_success.style.display === 'none') {
+            btn_success.style.display = 'block'
+            input_group2.style.display = 'none'
+        } else {
+            btn_success.style.display = 'none'
+            input_group2.style.display = 'flex'
+            appliance.select()
+        }
+    })
+
+    third.addEventListener('click', () => {
+        const btn_danger = document.querySelector('.btn-danger')
+        const input_group3 = document.querySelector('.input_group3')
+        const ustensil = document.querySelector('.ustensils_input')
+        if (btn_danger.style.display === 'none') {
+            btn_danger.style.display = 'block'
+            input_group3.style.display = 'none'
+        } else {
+            btn_danger.style.display = 'none'
+            input_group3.style.display = 'flex'
+            ustensil.select()
+        }
+    })
 }
+
+showInput()
+
+function filterInput() {
+    const ingredientButton = document.querySelector('.ingredients_input')
+    const appliance = document.querySelector('.appliances_input')
+    const ustensil = document.querySelector('.ustensils_input')
+
+    ingredientButton.addEventListener('input', () => {
+        const filterBlue = document.querySelector('.blue')
+        const filterBlueArray = Array.from(filterBlue.children)
+        filterBlueArray.forEach((filter) => {
+            if (filter.innerText.toLowerCase().includes(ingredientButton.value.toLowerCase())) {
+                filter.style.display = 'block'
+            } else {
+                filter.style.display = 'none'
+            }
+        })
+    })
+
+    appliance.addEventListener('keyup', () => {
+        const filterGreen = document.querySelector('.green')
+        const filterGreenArray = Array.from(filterGreen.children)
+        filterGreenArray.forEach((filter) => {
+            if (filter.innerText.toLowerCase().includes(appliance.value.toLowerCase())) {
+                filter.style.display = 'block'
+            } else {
+                filter.style.display = 'none'
+            }
+        })
+    })
+
+    ustensil.addEventListener('keyup', () => {
+        const filterRed = document.querySelector('.red')
+        const filterRedArray = Array.from(filterRed.children)
+        filterRedArray.forEach((filter) => {
+            if (filter.innerText.toLowerCase().includes(ustensil.value.toLowerCase())) {
+                filter.style.display = 'block'
+            } else {
+                filter.style.display = 'none'
+            }
+        })
+    })
+}
+
+filterInput()
+
+
+
+
+
 
 
 

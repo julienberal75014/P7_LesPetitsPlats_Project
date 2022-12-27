@@ -10,3 +10,4 @@ async function fetchRecipes() {
 
 displayResult()
 displayFilters()
+

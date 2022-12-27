@@ -49,6 +49,14 @@ async function displayResult(recettesList) {
         `
   }
   )
-  displayRecettes = displayRecettes.join('')
+    .join('')
+  if (recettesList.length === 0) {
+    recettesContainer.innerHTML = `<p class="mt-5 lead text-center"> Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson »</p>`
+    return
+  }
+
   recettesContainer.innerHTML = displayRecettes
 }
+
+
+
