@@ -111,30 +111,48 @@ nav {
   display: none;
 }
 
-.btn-primary,
-.blue {
+.btn-primary {
   background-color: #3282f7;
   border: none;
   margin-right: 1rem;
 }
 
-.dropdown-menu.show {
+.blue {
+  background-color: #3282f7;
+  border: none;
+  margin-right: 1rem;
   column-fill: initial;
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 0px 30px;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  transform: translate(0px, 60px);
 }
 
 .blue a:hover {
   background-color: #2a6ed1;
 }
 
-.btn-success,
+.btn-success {
+  background-color: #68d9a4;
+  border: none;
+  margin-right: 1rem;
+}
+
 .green {
   background-color: #68d9a4;
   border: none;
   margin-right: 1rem;
+  column-fill: initial;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0px 30px;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  transform: translate(0px, 60px);
 }
 
 .btn-success:hover {
@@ -149,10 +167,24 @@ nav {
   background-color: #4dbd7f;
 }
 
-.btn-danger,
+.btn-danger {
+  background-color: #ed6454;
+  border: none;
+  margin-right: 1rem;
+}
+
 .red {
   background-color: #ed6454;
   border: none;
+  margin-right: 1rem;
+  column-fill: initial;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0px 30px;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  transform: translate(0px, 60px);
 }
 
 .btn-danger:hover {
@@ -174,6 +206,16 @@ nav {
 
 .recipe_card {
   width: 380px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
 }
 
 .content {

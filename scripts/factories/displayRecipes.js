@@ -7,6 +7,7 @@ async function displayResult(recettesList) {
   let displayRecettes = recettes.map((recette) => {
     return `
         <div class="recipe_card">
+        <a href="#">
         <svg width ="380" height="178" viewBox="0 0 380 178" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 5C0 2.23858 2.23858 0 5 0H375C377.761 0 380 2.23858 380 5V178H0V5Z" fill="#C7BEBE"/>
         </svg>
@@ -45,6 +46,7 @@ async function displayResult(recettesList) {
           </div>
           </div>
          </div>
+         </a>
         </div>
         `
   }

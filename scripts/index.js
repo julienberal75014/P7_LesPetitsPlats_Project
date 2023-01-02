@@ -8,6 +8,10 @@ async function fetchRecipes() {
     return recipes
 }
 
-displayResult()
-displayFilters()
+function init() {
+    displayResult()
+    displayFilters()
+}
+
+init()
 
