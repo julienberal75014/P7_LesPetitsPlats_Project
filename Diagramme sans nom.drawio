@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-05T11:50:02.930Z" agent="5.0 (Windows)" version="20.8.1" etag="cpuGToCLd1dXhaQ2UbwY" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-05T11:55:56.160Z" agent="5.0 (Windows)" version="20.8.1" etag="qaYeyGuYnQ5Z86-VK8px" type="github" pages="2">
   <diagram id="mj-FfH_b73bmnx-qT4oj" name="Page-1">
     <mxGraphModel dx="2049" dy="1077" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -61,6 +61,14 @@
         <mxCell id="E9D6X-pXUMolR6ZD_Itp-33" value="Affiche un message d&#39;erreur" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="625" y="730" width="160" height="160" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="iD30P5CRI2vCBHCoAFEL" name="Page-2">
+    <mxGraphModel dx="1434" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
