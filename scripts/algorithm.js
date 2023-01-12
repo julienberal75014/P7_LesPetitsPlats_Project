@@ -9,17 +9,22 @@ async function filterSearchBar() {
     let recettes = [];
 
     if (searchBar.value.length >= 3) {
-        // on filtre les recettes en fonction de la recherche
-        recipes.filter((recipe) => {
-            // on vérifie si le nom, la description ou les ingrédients contiennent la recherche
-            if (recipe.name.toLowerCase().includes(searchBar.value.toLowerCase())
-                || recipe.description.toLowerCase().includes(searchBar.value.toLowerCase())
-                || recipe.ingredients.some((ingredient) => ingredient.ingredient.toLowerCase().includes(searchBar.value.toLowerCase()))
+
+        for (let i = 0; i < recipes.length; i++) {
+            if (recipes[i].name.toLowerCase().includes(searchBar.value.toLowerCase()) ||
+                recipes[i].description.toLowerCase().includes(searchBar.value.toLowerCase())
             ) {
-                // on ajoute la recette à la liste des recettes à afficher
-                recettes.push(recipe);
+                recettes.push(recipes[i]);
+            } else {
+                for (let j = 0; j < recipes[i].ingredients.length; j++) {
+                    if (recipes[i].ingredients[j].ingredient.toLowerCase().includes(searchBar.value.toLowerCase())) {
+                        recettes.push(recipes[i]);
+                        break;
+                    }
+                }
             }
-        });
+        }
+
     } else {
         // on affiche toutes les recettes
         recettes = recipes;
